@@ -20,7 +20,7 @@ let fetcher = function(address = 'http://www.example.edu', fileName) {
      
   request(address, (error, response, body) => {
     if (error) {
-      console.log(error);
+      console.log('incorrect url',error);
       return error;
     }
     fs.writeFile(`./${fileName}.html`, body, (error) => {
